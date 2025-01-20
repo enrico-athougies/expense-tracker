@@ -2,10 +2,53 @@ const expenseForm = document.getElementById('expense-form');
 const expenseTable = document.getElementById('expense-table');
 const downloadButton = document.getElementById('download-csv');
 
-let expenses = []; // Array to hold expense data
+const categories = `
+Elisha
+Transport
+Athougies
+Extra curricular activities
+Giving Parties / Treats
+Phone / Internet
+Vehicle Maintenance
+Salary
+Groceries
+Miscellaneous
+Household Expenses
+On Self
+Lunch
+Breakfast
+Medicines
+Utilities
+Clothes / Shoes / Bags
+Snacks
+Dinner
+Gifts / Cards
+Parking
+Petrol
+Spectacles / Contact lenses
+Mass offertory
+Beverages
+Drinks
+Rental Income
+Other Income
+Mortgage
+Education
+Health Insurance
+Tuckshop
+`.trim().split('\n'); // Convert the string into an array
 
-// Add expense to the table and array
-expenseForm.addEventListener('submit', (e) => {
+  // Populate the category dropdown
+  categories.forEach(category => {
+    const option = document.createElement('option');
+    option.value = category;
+    option.textContent = category;
+    categoryDropdown.appendChild(option);
+  });
+
+  let expenses = []; // Array to hold expense data
+
+  // Add expense to the table and array
+  expenseForm.addEventListener('submit', (e) => {
   e.preventDefault();
 
   // Get form values
