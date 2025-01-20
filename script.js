@@ -36,7 +36,7 @@ Health Insurance
 Tuckshop
 `.trim().split('\n'); // Convert the string into an array
 
-console.log(categories);
+
 
   // Populate the category dropdown
   categories.forEach(category => {
@@ -45,6 +45,8 @@ console.log(categories);
     option.textContent = category;
     categoryDropdown.appendChild(option);
   });
+
+console.log(categories);
 
   let expenses = []; // Array to hold expense data
 
