@@ -28,6 +28,13 @@
     </label><br><br>
     <label>Amount: <input type="number" id="amount" step="0.01" required></label><br><br>
     <label>Notes: <input type="text" id="notes"></label><br><br>
+    <label>Payment Mode:
+        <select id="payment_mode" required>
+            <option value="Cash" selected>Cash</option>
+            <option value="Credit Card" selected>Credit Card</option>
+            <option value="Debit Card" selected>Debit Card</option>            
+        </select>
+    </label><br><br>
     <button type="submit">Add Expense</button>
   </form>
 
@@ -38,6 +45,7 @@
         <th>Category</th>
         <th>Amount</th>
         <th>Notes</th>
+        <th>Payment Mode</th>          
       </tr>
     </thead>
     <tbody id="expense-table">
