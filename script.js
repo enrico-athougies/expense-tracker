@@ -3,7 +3,6 @@ const expenseTable = document.getElementById('expense-table');
 const downloadButton = document.getElementById('download-csv');
 
 const categories = `
-Elisha
 Transport
 Athougies
 Extra curricular activities
