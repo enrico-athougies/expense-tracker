@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expense Tracker</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    form { margin-bottom: 20px; }
+    table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+    table, th, td { border: 1px solid #ccc; }
+    th, td { padding: 10px; text-align: left; }
+    button { padding: 10px 15px; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <h1>Expense Tracker</h1>
+  <form id="expense-form">
+    <label>Date: <input type="date" id="date" required></label><br><br>
+    <label>Category: <input type="text" id="category" required></label><br><br>
+    <label>Amount: <input type="number" id="amount" step="0.01" required></label><br><br>
+    <label>Notes: <input type="text" id="notes"></label><br><br>
+    <button type="submit">Add Expense</button>
+  </form>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Category</th>
+        <th>Amount</th>
+        <th>Notes</th>
+      </tr>
+    </thead>
+    <tbody id="expense-table">
+    </tbody>
+  </table>
+
+  <button id="download-csv">Download CSV</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
