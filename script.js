@@ -7,7 +7,8 @@ Transport
 Extra curricular activities
 `.trim().split('\n'); // Convert the string into an array
 
-
+// Populate the category dropdown
+const categoryDropdown = document.getElementById('category');
 
   // Populate the category dropdown
   categories.forEach(category => {
