@@ -37,6 +37,8 @@ Health Insurance
 Tuckshop
 `.trim().split('\n'); // Convert the string into an array
 
+console.log(categories);
+
   // Populate the category dropdown
   categories.forEach(category => {
     const option = document.createElement('option');
