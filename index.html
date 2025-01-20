@@ -17,7 +17,15 @@
   <h1>Expense Tracker</h1>
   <form id="expense-form">
     <label>Date: <input type="date" id="date" required></label><br><br>
-    <label>Category: <input type="text" id="category" required></label><br><br>
+    <label>Category: 
+        <select id="category" required></select>
+    </label><br><br>
+    <label>Currency: 
+        <select id="currency" required>
+          <option value="AUD" selected>AUD</option>
+          <option value="INR">INR</option>
+        </select>
+    </label><br><br>
     <label>Amount: <input type="number" id="amount" step="0.01" required></label><br><br>
     <label>Notes: <input type="text" id="notes"></label><br><br>
     <button type="submit">Add Expense</button>
