@@ -46,7 +46,7 @@ const categoryDropdown = document.getElementById('category');
     categoryDropdown.appendChild(option);
   });
 
-console.log(categories);
+// console.log(categories);
 
   let expenses = []; // Array to hold expense data
 
