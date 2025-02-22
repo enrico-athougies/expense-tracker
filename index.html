@@ -39,6 +39,14 @@
             <option value="BPay">BPay</option>          
         </select>
     </label><br><br>
+        <label>Bank:
+        <select id="bank">
+            <option value="CBA">CBA</option>
+            <option value="NAB">NAB</option>
+            <option value="ING">ING</option>      
+            <option value="HDFC">HDFC</option>
+        </select>
+    </label><br><br>
     <button type="submit">Add Expense</button>
   </form>
 
@@ -49,7 +57,8 @@
         <th>Category</th>
         <th>Amount</th>
         <th>Notes</th>
-        <th>Payment Mode</th>          
+        <th>Payment Mode</th>  
+        <th>Bank</th> 
       </tr>
     </thead>
     <tbody id="expense-table">
