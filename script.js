@@ -59,10 +59,11 @@ const categoryDropdown = document.getElementById('category');
   const category = document.getElementById('category').value;
   const amount = parseFloat(document.getElementById('amount').value).toFixed(2);
   const notes = document.getElementById('notes').value;
-  const payment_mode = document.getElementById('payment_mode').value;  
+  const payment_mode = document.getElementById('payment_mode').value;
+  const bank = document.getElementById('bank').value;  
 
   // Add expense to array
-  expenses.push({ date, category, amount, notes, payment_mode });
+  expenses.push({ date, category, amount, notes, payment_mode, bank });
 
   // Add expense to the table
   const row = document.createElement('tr');
@@ -71,7 +72,8 @@ const categoryDropdown = document.getElementById('category');
     <td>${category}</td>
     <td>${amount}</td>
     <td>${notes}</td>
-    <td>${payment_mode}</td>    
+    <td>${payment_mode}</td>
+    <td>${bank}</td>
   `;
   expenseTable.appendChild(row);
 
@@ -82,8 +84,8 @@ const categoryDropdown = document.getElementById('category');
 // Download CSV file
 downloadButton.addEventListener('click', () => {
   const csvContent = [
-    ['Date', 'Category', 'Amount', 'Notes', 'Payment Mode'], // CSV header
-    ...expenses.map(exp => [exp.date, exp.category, exp.amount, exp.notes, exp.payment_mode]) // Rows
+    ['Date', 'Category', 'Amount', 'Notes', 'Payment Mode', 'Bank'], // CSV header
+    ...expenses.map(exp => [exp.date, exp.category, exp.amount, exp.notes, exp.payment_mode, exp.bank]) // Rows
   ]
     .map(e => e.join(',')) // Join each row with commas
     .join('\n'); // Join all rows with newlines
