@@ -25,7 +25,6 @@ Parking
 Petrol
 Spectacles / Contact lenses
 Mass offertory
-Beverages
 Drinks
 Rental Income
 Other Income
